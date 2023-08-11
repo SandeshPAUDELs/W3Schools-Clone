@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+   
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class = "bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="w3Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-body">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tutorials
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HTML And CSS</a></li>
+                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                <!-- <li><hr class="dropdown-divider"></li> -->
+                <li><a class="dropdown-item" href="#">DataAnalytics</a></li>
+                <li><a class="dropdown-item" href="#">Web Building</a></li>
+                <li><a class="dropdown-item" href="#">Backend</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Esercises
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HTML And CSS</a></li>
+                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                <li><a class="dropdown-item" href="#">Backend</a></li>
+
+              </ul></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  GetCertified
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">HTML And CSS</a></li>
+                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="#">Programs</a></li>
+                  <li><a class="dropdown-item" href="#">Backend</a></li>
+  
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Free Tutorials</a></li>
+                    <li><a class="dropdown-item" href="#">References</a></li>
+                    <!-- <li><hr class="dropdown-divider"></li> -->
+                    <li><a class="dropdown-item" href="#">Create a Website</a></li>
+                    <li><a class="dropdown-item" href="#">Exercises</a></li>
+                    <li><a href="" class="dropdown-item">Quizzes</a></li>
+                    <li><a href="" class = "dropdown-item">Get Certified</a></li>
+                    <li><a href="" class = "dropdown-item">Login/SignUp</a></li>
+                    <li><a href="" class = "dropdown-item">My Learning</a></li>
+                    <li><a href="" class = "dropdown-item">Upgrade</a></li>
+                    <li><a href="" class = "dropdown-item">Where to Start</a></li>
+
+    
+                  </ul></li>
+          </ul>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Bootcamps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Spaces</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#"><button>Login</button></a>
+               -->
+               <button style = "border-radius: 15px;" type="button" class="btn btn-success">LogIn</button>
+            </li>
+            <li class="nav-item">
+<button style = "background-color: rgb(149, 222, 149); margin-left: -10px; border-radius: 15px;"type="button" class="btn">SignIn</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-dark bg-secondary">
+      <!-- Navbar content -->
+      <ul class = "nav justify-content-start" id = "nav">
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">HTML</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">CSS</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">JAVASCRIPT</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">SQL</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">PYTHON</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">JAVA</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">PHP</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">BOOTSTRAP</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">HOW TO</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">W3.CSS</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">C</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">C++</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">C#</button></li>
+        <li class = "nav-item"><button type="button" class="btn btn-secondary">REACT</button></li>
+      </ul>
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li class="nav-item"><i class="fa-solid fa-earth-africa"></i></li>
+        <!-- <li class="nav-item"><i class="fa-solid fa-circle-three-quarters-stroke"></i></li> -->
+        <li><i class="fa fa-adjust" aria-hidden="true"></i></li>
+      </ul>
+    </nav>
+    <div class="container-fluid bg-secondary text-center">
+      <h1 class = "text-white" style = "font-size: 50px; padding-top: 60px;">Learn to Code</h1>
+      
+      <p class = "text-warning">With the world's largest web developer site.</p>
+      <br>
+      <div class="d-flex justify-content-center"><input style = "padding: 10px; width: 320px;" type="text" placeholder = "Enter your Desired Course" /><span class = "span1"><i class="fa-solid fa-magnifying-glass"></i></span></div>
+      <br>
+      <p id = "p">Not Sure Where to Begin!</p>
+      
+    </div>
+    
+    <div class="d-flex justify-content-around text-white">
+      <div class="row" id = "forHTML">
+        <div class="col text-center" id = "Tutorial">
+          <h1 style = "padding: 30px; font-weight: bold;">HTML</h1>
+                <p>A Language for creating WebPages</p>
+                <div class="list-button">
+                  <button type="button" class="btn btn-success">Learn HTML</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnY">Video Tutorials</button>
+                  <br>
+                  <button type="button" class="btn btn-dark">Get References</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnG">Get Certified</button>
+                </div>
+        </div>
+        <div class="col text-start" id = "Example">
+          <p>HTML Example</p>
+      <div class="secondContainer">
+
+      </div>
+      <button class="btn btn-success">Try itYourself</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around text-white">
+      <div class="row" id = "forCSS">
+        <div class="col text-center" id = "Tutorial">
+          <h1 style = "padding: 30px;">CSS</h1>
+                
+                <p>The language for Styling Webpages</p>
+                <div class="list-button">
+                  <button type="button" class="btn btn-success">Learn CSS</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnY">Video Tutorials</button>
+                  <br>
+                  <button type="button" class="btn btn-dark">Get References</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnG">Get Certified</button>
+                </div>
+        </div>
+        <div class="col text-start" id = "Example">
+          <p>CSS Example</p>
+      <div class="secondContainer">
+
+      </div>
+      <button class="btn btn-success">Try itYourself</button>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-around text-white">
+      <div class="row" id = "forJS">
+        <div class="col text-center" id = "Tutorial">
+          <h1 style = "padding: 30px;">JavaScript</h1>
+                
+                <p>A Webserver Programming Language</p>
+                <div class="list-button">
+                  <button type="button" class="btn btn-success color: white;">Learn Javascript</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnY">Video Tutorials</button>
+                  <br>
+                  <button type="button" class="btn btn-dark">Get References</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnG">Get Certified</button>
+                </div>
+        </div>
+        <div class="col text-start" id = "Example">
+          <p>JavaScrip Example</p>
+      <div class="secondContainer">
+
+      </div>
+      <button class="btn btn-success">Try itYourself</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around text-white">
+      <div class="row" id = "forPython">
+        <div class="col text-center" id = "Tutorial">
+          <h1 style = "padding: 30px;">Python</h1>
+                
+                <p>A Popular Programming Language</p>
+                <div class="list-button">
+                  <button type="button" class="btn btn-success">Learn Python</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnY">Video Tutorials</button>
+                  <br>
+                  <button type="button" class="btn btn-dark">Get References</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnG">Get Certified</button>
+                </div>
+        </div>
+        <div class="col text-start" id = "Example">
+          <p>Python Example</p>
+      <div class="secondContainer">
+
+      </div>
+      <button class="btn btn-success">Try itYourself</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around text-white">
+      <div class="row" id = "forSQL">
+        <div class="col text-center" id = "Tutorial">
+          <h1 style = "padding: 30px;">SQL</h1>
+                
+                <p>A Language for Accessing Web Pages</p>
+                <div class="list-button">
+                  <button type="button" class="btn btn-success">Learn SQL</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnY">Video Tutorials</button>
+                  <br>
+                  <button type="button" class="btn btn-dark">Get References</button>
+                  <br>
+                  <button type="button" class="btn" id = "btnG">Get Certified</button>
+                </div>
+        </div>
+        <div class="col text-start" id = "Example">
+          <p>SQL Example</p>
+      <div class="secondContainer">
+
+      </div>
+      <button class="btn btn-success">Try itYourself</button>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-around">
+      <div class="row">
+        <div class="col text-center" id = "Yelo">
+          <h3>jQuery</h3>
+        <p>A JS library for developing web pages</p>
+        <button class = "bg-dark text-white">Learn jQuery</button>
+        </div>
+        <div class="col text-center" id = "Pink">
+          <h3>Java</h3>
+          <p>A programming Language</p>
+          <button class = "bg-dark text-white">Learn Java</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around">
+      <div class="row">
+        <div class="col text-center" id = "blue">
+          <h3>PHP</h3>
+        <p>A web server Programming Language</p>
+        <button class = "bg-dark text-white">Learn Php</button>
+        </div>
+        <div class="col text-center" id = "sky">
+          <h3>Bootstrap</h3>
+          <p>A CSS framework for designing the better web pages.</p>
+          <button class = "bg-dark text-white">Learn Java</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex">
+      <div class="p-2 flex-fill"><div class="container-fluid">
+        <div class="row">
+          <div class="d-flex text-center bg-secondary">
+            <div class="p-2 flex-fill">
+              <div class="example">
+                <h1>C</h1>
+                
+      </div>
+      </div>
+      </div></div>
+      </div></div>
+      <div class="p-2 flex-fill"><div class="container-fluid">
+        <div class="row">
+          <div class="d-flex text-center bg-secondary">
+            <div class="p-2 flex-fill">
+              <div class="example">
+                <h1>C#</h1>
+                
+      </div>
+      </div>
+      </div></div>
+      </div></div>
+    </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half1">
+        R
+      </div>
+      <div class="col-sm text-center" id = "Half2">
+        Kotlin
+      </div>
+      <div class="col-sm text-center" id = "Half3">
+        Node.JS
+      </div>
+      <div class="col-sm text-center" id = "Half4">
+        React
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half4">
+        JSON
+      </div>
+      <div class="col-sm text-center" id = "Half1">
+        Vue
+      </div>
+      <div class="col-sm text-center" id = "Half2">
+        MYSQL
+      </div>
+      <div class="col-sm text-center" id = "Half3">
+        XML
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half3">
+        SASS
+      </div>
+      <div class="col-sm text-center" id = "Half4">
+        Canvas
+      </div>
+      <div class="col-sm text-center" id = "Half1">
+        Resperry Pi
+      </div>
+      <div class="col-sm text-center" id = "Half2">
+      Cyber Security
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half2">
+        Colors
+      </div>
+      <div class="col-sm text-center" id = "Half3">
+        Git
+      </div>
+      <div class="col-sm text-center" id = "Half4">
+        Matplotlib
+      </div>
+      <div class="col-sm text-center" id = "Half1">
+        NumPy
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half1">
+        Pandas
+      </div>
+      <div class="col-sm text-center" id = "Half2">
+        SciPy
+      </div>
+      <div class="col-sm text-center" id = "Half3">
+        ASP
+      </div>
+      <div class="col-sm text-center" id = "Half4">
+        AngularJS
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white">
+    <div class="row align-content-center">
+      <div class="col-sm text-center" id = "Half4">
+        AppML
+      </div>
+      <div class="col-sm text-center" id = "Half1">
+        Go
+      </div>
+      <div class="col-sm text-center" id = "Half2">
+        TypeScript
+      </div>
+      <div class="col-sm text-center" id = "Half3">
+        Django
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid container-dark bg-secondary">
+      <br>
+      <h1 class = "text-center text-white" id = "h1">Code Editor</h1>
+      <br>
+      <h5 class = "text-center text-white">With our online code editor, you can edit code and view the result in your browser</h5>
+    </div>
+    <div class="container align-content-center">
+      <img src="https://www.w3schools.com/codeeditor.gif" alt="W3 schools" />
+    </div>
+    <button style = "margin: 20px 2px" type="button" class="btn btn-success">Try Frontend Editor(HTML/CSS/JS)</button>
+    <br>
+    <button type="button" class="btn btn-warning">Try Backend Editor(Python/Php/Java/C..)</button>
+    
+    <div class="container-fluid bg-secondary text-center text-white">
+      <div class="container align-content-center">
+        <h1>W3School Spaces</h1>
+        <p>If you want to create your own website, check out <span>W3Schools Spaces</span>.</p>
+        <p>It is free to use, and does not require any setup:</p>
+        <!-- <img src="https://www.w3schools.com/codeeditor.gif" alt="W3 schools" /> -->
+        <img src="https://www.w3schools.com/spaces/dynamicspaces.gif" class = "img-fluid" alt="">
+        <br><br><br>
+        <img src="https://www.w3schools.com/how-spaces-works3.png" class = "img-fluid" alt="">
+      </div>
+      <br>
+      <button style = "margin: 20px 0px;" class = "btn1 btn-success text-white">Learn More</button>
+      <br>
+    </div>
+    <div class="container-fluid bg-secondary text-center text-white">
+      <div class="container align-content-center">
+        <h1>My learning</h1>
+        <p>Track your progress with our free "My Learning" program.</p>
+        <p>Log in to your account, and start earning points!</p>
+        <img src="https://www.w3schools.com/myl-green-off.png" alt="">
+        <button style = "margin: 20px 0px;" class = "btn1 btn-success text-white">Sign Up for Free</button>
+        </div>
+      </div>
+      <div class="container-fluid bg-dark text-center text-white">
+        <h1>Become a PRO user</h1>
+        <p class = "text-warning">And Unlock Useful Features</p>
+        <p><i class="fa fa-check-circle" aria-hidden="true"></i>Browse W3Schools without ads</p>
+        <p><i class="fa fa-check-circle" aria-hidden="true"></i>Website hosting (Includes Spaces PRO)</p>
+        <p><i class="fa fa-check-circle" aria-hidden="true"></i>Access to our HTML Video Tutorial</p>
+        <br>
+        <button class = "btn1 btn-success text-white">Learn More</button>
+      </div>
+      <div class="container-fluid text-center text-dark" id = "colorPicker">
+        <h1>Color Picker</h1>
+        <p>W3Schools' famous color picker:</p>
+        <img style = "margin: 20px 0px;" src="https://www.w3schools.com/images/colorpicker.png" alt="">
+      </div>
+      <div class="container-fluid text-center text-dark" id = "codeGame">
+        <h1 style = "font-weight: bold;">Code Game</h1>
+        <p>Help the Lynx collect pine cones!</p>
+        <img src="https://www.w3schools.com/images/w3lynx_200.png" alt="" />
+        <br>
+        <button style = "margin: 40px 0px;" class="btn btn-dark text-white">Play Game</button>
+      </div>
+      <div class="container-fluid text-center text-white">
+        <h1 style = "font-weight: bold;">Exercises and Quizzes</h1>
+        <p>Test your skills!</p>
+        <div class="container-fluid text-center bg-secondary">
+          <div class="row">
+            <div class="col Exercises">
+              Exercises
+            </div>
+            <div class="col Quizzes">
+              Quizzes
+            </div>
+        
+      </div>
+      <div class="container-fluid text-center text-white">
+        <h1 style = "font-weight: bold;">Web Templates</h1>
+        <p>Browse our selection of free responsive HTML Templates</p>
+        <!-- <img src="https://www.w3schools.com/w3css_templates.jpg" class = "img-fluid" alt=""> -->
+        <img class = "img-fluid template" src="https://www.w3schools.com/w3css_templates.jpg" alt="..." />
+        <br>
+        <button class = "btn btn-dark text-white" id = "template">Browse Template</button>
+      </div>
+
+      <div class="container-fluid text-start text-warning bg-dark">
+        <h1 style = "font-size: 50px; margin: 60px -18px;">Kickstart your career</h1>
+          <p style = "font-size: 20px; margin: 30px -10px;">Get certified by completing a course</p>
+          <button style = "margin: 20px 0px;" class="btn btn-success text-white">Get Started</button>
+      </div>
+      <div class="container text-center text-white bg-secondary">
+        <h1 style = "font-size: 50px; margin-top: 40px; font-weight: bold;">How To Section</h1>
+          <h5>Code snippets for HTML, CSS and JavaScript</h5>
+          <p>For example, how to create a slideshow:</p>
+          <p>For example, how to create a slideshow:</p>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <br>
+          <button class="btn text-white bg-dark" id = "btn2">Learn How To</button>
+        </div>
+        
+        </div>
+        <div class="container-fluid text-center">
+          <div class="row justify-content-md-center text-white">
+            <h5 style = "font-weight: bold; margin-top: 50px;">Follow Us:</h5>
+            
+          </div>
+          <hr>
+          <div class="container-fluid text-center text-white ">
+            <div class="hstack gap-3">
+              <div class="bg-dark border">Spaces</div>
+              <div class="bg-dark border">Upgrade</div>
+              <div class="bg-dark border">Newsletter</div>
+              <div class="bg-dark border">Get Certfied</div>
+              <div class="bg-dark border">Report Error</div>
+            </div>
+          </div>
+          <hr>
+          
+        <div class="container-fluid">
+          <div class="row align-content-center">
+            <div class="col-sm text-start">
+              <ul class="list-items"><h6>Top Tutorials</h6>
+                <li>HTML Tutorials</li>
+                <li>CSS Tutorials</li>
+                <li>JavaScript Tutorial</li>
+                <li>How to Tutorial</li>
+                <li>SQl Tutorials</li>
+                <li>Python Tutorials</li>
+                <li>W3.CSS Tutorials</li>
+                <li>Bootstrap Tutorial</li>
+                <li>PHP Tutorials</li>
+                <li>Java Tutorial</li>
+                <li>C++ Tutorial</li>
+                <li>JQuery Tutorial</li>
+              </ul>
+            </div>
+            <div class="col-sm text-start">
+              <ul class="list-items"><h6>Top References</h6>
+                <li>HTML References</li>
+                <li>CSS References</li>
+                <li>JavaScript References</li>
+                <li>Angular References</li>
+                <li>SQl References</li>
+                <li>Python Reference</li>
+                <li>W3 References</li>
+                <li>database Ref</li>
+                <li>PHP References</li>
+                <li>Java References</li>
+                <li>C++ References</li>
+                <li>JQuery References</li>
+              </ul>
+            </div>
+            <div class="col-sm text-start">
+              <ul class="list-items"><h6>Top References</h6>
+                <li>HTML References</li>
+                <li>CSS References</li>
+                <li>JavaScript References</li>
+                <li>Angular References</li>
+                <li>SQl References</li>
+                <li>Python References</li>
+                <li>W3.CSS References</li>
+                <li>Bootstrap References</li>
+                <li>PHP References</li>
+                <li>Java References</li>
+                <li>C++ References</li>
+                <li>JQuery References</li>
+              </ul>
+            </div>
+            <div class="col-sm text-start">
+              <ul class="list-items"><h6>Top References</h6>
+                <li>HTML References</li>
+                <li>CSS References</li>
+                <li>JavaScript References</li>
+                <li>Angular References</li>
+                <li>SQl References</li>
+                <li>Python References</li>
+                <li>W3.CSS References</li>
+                <li>Bootstrap References</li>
+                <li>PHP References</li>
+                <li>Java References</li>
+                <li>C++ References</li>
+                <li>JQuery References</li>
+              </ul>
+            </div>
+          </div>
+        <hr>
+        <div class="d-flex justify-content-end text-white">FORUM|ABOUT</div>
+        <div class="container-fluid text-white text-center">
+          <p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+          <p><a href="#">Copyright 1999-2023 </a>by Refsnes Data. All Rights Reserved.</p>
+          <p>W3Schools is Powered by W3.CSS.</p>
+          <img src="" alt="">        
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

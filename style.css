@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    margin: -5px -5px;
+}
+i{
+    width: 50px;
+}
+
+.d-flex #forHTML{
+    background-color: #D9EEE1;
+    padding: 40px;
+}
+.d-flex #forCSS{
+    background-color: #FFF4A3;
+    padding: 40px;
+}
+.d-flex #forJS{
+    padding: 40px;
+}
+.d-flex #forPython{
+    background-color: #F3ECEA;
+    padding: 40px;
+}
+.d-flex #forSQL{
+    background-color: #96D4D4;
+    padding: 40px;
+}
+.d-flex #Example{
+    background-color:rgb(144, 144, 169);
+    /* margin: 0px 0px; */
+}
+.d-flex .row .col .secondContainer{
+    background-color: black;
+    width: auto;
+    margin: 2%;
+    height: 250px;
+}
+
+
+.container-fluid #p {
+    color: white;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+.d-flex .p-2 .row1 .d-flex .p-2 .list-button .btn{
+    width: 180px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+.d-flex .row .col .list-button #btnY{
+    background-color: rgb(241, 241, 108);
+    /* color: white; */
+}
+.d-flex .row .col .list-button #btnG{
+    background-color: rgb(243, 204, 211);
+}
+input{
+    width: 250px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    text-align: center;
+}
+.span1{
+    background-color: green;
+    width: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.container-fluid .container .row .col{
+    width: 46%;
+    margin: 2%;
+    background-color: green;
+    padding: 50px;
+    font-size: 20px;
+    /* margin: auto; */
+}
+.container-fluid .template{
+    height: auto;
+    width: auto;
+    margin-bottom: 40px;
+}
+.container-fluid #template{
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    /* margin-buttom: 20px; */
+}
+.d-flex .row{
+    width: 100%;
+}
+.d-flex .row .col{
+    width: 23%;
+    margin: 1%;
+}
+
+.d-flex .row #Yelo{
+    background-color: rgb(243, 243, 178);
+}
+.d-flex .row #Pink{
+    background-color: rgb(255, 192, 203);
+}
+.d-flex .row #blue{
+    background-color: rgb(144, 144, 169);
+}
+.d-flex .row #sky{
+    background-color: skyblue;
+}
+.d-flex .row .col h3{
+    text-decoration: bold;
+    margin-top: 10px;
+}
+.d-flex .row .col button{
+    background-color: dark;
+    color: green;
+    margin: 10px 0px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.d-flex .row1 .col{
+    width: 46%;
+    margin: 2%;
+    font-size: 30px;
+    padding: 35px;
+    height: 150px;
+}
+.example button{
+    width: 150px;
+    border: 1px solid black;
+    border: 25px;
+    margin-bottom: 5px;
+}
+.row{
+    width: 100%;
+    background-color: grey;
+    /* height: 300px; */
+    width: auto;
+
+}
+.exampleMa{
+    margin: 2px;
+    height: 250px;
+}
+.d-flex{
+    height: auto;
+}
+.btn1{
+    margin: 20px 0px;
+    /* margin-buttom: 20px; */
+    padding: 10px;
+    background-color: green;
+    width: 300px;
+    border-radius: 25px;
+    /* border: 1px solid red; */
+}
+.row1{
+    width: 100%;
+    background-color: grey;
+    /* height: 150px; */
+    width: auto;
+}
+.container-fluid .container-fluid .row .Exercises{
+    width: 48%;
+    margin: 1%;
+    background-color: green;
+    /* height: 100px; */
+    padding: 30px;
+    font-size: 30px;
+}
+.container-fluid .container-fluid .row .Quizzes{
+    width: 48%;
+    margin: 1%;
+    background-color: rgb(227, 227, 133);
+    padding: 30px;
+    font-size: 30px;
+}
+.container img{
+    width: 100%;
+    height: auto;
+    /* margin-left: 30px; */
+}
+.container p span{
+    color: rgb(199, 205, 36);
+}
+.container p span:hover{
+    color: rgb(128, 197, 128);
+}
+#colorPicker{
+    background-color: pink;
+}
+#colorPicker img{
+    width: 200px;
+    height: 200px;
+}
+#codeGame{
+    background-color: rgb(106, 151, 168);
+}
+#codeGame img{
+    width: 200px;
+    height: 200px;
+}
+/* .container-fluid .row #Half{
+    margin: 5px;
+    font-size: 30px;
+    padding: 30px;
+    color: white;
+} */
+.container-fluid .row #Half1{
+    background-color: darkgray;
+    font-size: 30px;
+    padding: 30px;
+    margin: 2% 2%;
+    
+}
+.container-fluid .row #Half2{
+    background-color:rgb(106, 151, 168);
+    font-size: 30px;
+    padding: 30px;
+    margin: 2% 2%;
+    
+}
+.container-fluid .row #Half3{
+    background-color: skyblue;
+    font-size: 30px;
+    padding: 30px;
+    margin: 2% 2%;
+    
+}
+.container-fluid .row #Half4{
+    background-color: pink;
+    font-size: 30px;
+    padding: 30px;
+    margin: 2% 2%;
+    
+}
+.d-flex .row .col-sm{
+    background-color: green;
+}
+.container-fluid h1, p{
+    /* font-size: 20px; */
+    font-weight: bold;
+}
+.carousel .carousel-inner .carousel-item img{
+    height: auto;
+}
+.container #btn2{
+    width: 300px;
+    border: 1px solid dark;
+    border-radius: 20px;
+    /* padding: 20px; */
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.list-items{
+    list-style: none;
+    color: white;
+}
+.list-items li:hover{
+    color: green;
+}
+.container-fluid .hstack{
+    margin-bottom: 50px;
+}
+.container-fluid .hstack{
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    /* padding: 5px; */
+}
+.container-fluid .hstack .border{
+    width: 300px;
+    padding: 7px;
+    border-radius: 15px;
+}
+.container-fluid .row .col-sm .list-items h6{
+    padding: 15px;
+}
+
+@media (max-width: 480px){
+    .navbar #nav{
+        display: none
+    }
+    .navbar #nav .nav .nav-item{
+        justify-content: center;
+    }
+    .d-flex {
+        width: 100%;
+    }
+    .d-flex .row #Example{
+        display: none;
+    }
+    
+    
+    .container-fluid .hstack{
+        display: block;
+        /* justify-content: center; */
+    }
+    
+    .container-fluid .container-fluid .row .col{
+        flex-basis: 50%;
+    }
+    .example button{
+        width: 120px;
+    }
+    .d-flex .row .col{
+        flex-basis: 50%;
+    }
+    
+    
+}
+@media (min-width: 481px) and (max-width: 880px){
+    .navbar #nav{
+        display: none;
+    }
+    .d-flex {
+        width: 100%;
+    }
+    .d-flex .row .col{
+        flex-basis: 100%;
+    }
+    .container-fluid .row .col-sm{
+        flex-basis: 46%;
+    }
+    /* .container-fluid #Aarko{
+        display: flex;
+        flex-wrap: wrap;
+    } */
+    .container-fluid .hstack{
+        display: block;
+        /* justify-content: center; */
+    }
+    
+    
+
+}
